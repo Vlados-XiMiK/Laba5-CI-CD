@@ -1,0 +1,15 @@
+name: Get OS Info
+
+on:
+  workflow_dispatch:  
+
+jobs:
+  get-os-info:
+    runs-on: windows-latest 
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3  # Клонуємо репозиторій
+
+      - name: Display OS Information
+        run: uname -v  # Виводимо інформацію про операційну систему

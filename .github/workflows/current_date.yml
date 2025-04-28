@@ -1,0 +1,15 @@
+name: Get Current Date
+
+on:
+  push:  
+
+jobs:
+  print-date:
+    runs-on: windows-latest  
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3  
+
+      - name: Display Current Date
+        run: Get-Date  # Виводимо поточну дату
